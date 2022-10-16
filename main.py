@@ -50,6 +50,6 @@ wm = WeChatMessage(client)
 wea, temperature = get_weather()
 data = {"weather":{"value":wea},"temperature":{"value":temperature},"love_days":{"value":get_count()},"birthday_left":{"value":get_birthday()},"words":{"value":get_words(), "color":get_random_color()}}
 user_id = user_id.split(',')
-for userid in user_id:
-    res = wm.send_template(userid, template_id, data)
+for id in user_id:
+    res = wm.send_template(id, template_id, data)
     print(res)
